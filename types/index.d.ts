@@ -395,7 +395,7 @@ interface IUpload {
     validate?(files: File[]): string | boolean;
 
     /** 自定义上传，当发生错误时返回错误信息 */
-    handler?(files: File[]): string | null | Promise<string> | Promise<null>;
+    handler?(files: File[]): string | null | Promise<string | null>;
 
     /** 对服务端返回的数据进行转换，以满足内置的数据结构 */
     format?(files: File[], responseText: string): string;
